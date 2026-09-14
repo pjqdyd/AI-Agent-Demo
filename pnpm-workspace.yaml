@@ -1,0 +1,7 @@
+packages:
+  # 所有 packages 下的子包
+  - 'packages/*'
+  # 可选：apps 放应用项目（前端页面、后端服务）
+  - 'apps/*'
+  # 排除目录（可选）
+  # - '!packages/**/test'
