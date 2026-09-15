@@ -1,5 +1,30 @@
 ### AI-Agent-Demo AI智能体案例项目
 
+<div align="center" 
+     style="
+        width: 100%; 
+        height: 50px; 
+        display: flex; 
+        flex-direction:column; 
+        justify-content: center; 
+        align-items: center;">
+            <h1 style="display: inline-block; font-size: 20px; line-height: 20px; font-weight: bold;">
+                <b>AI-Agent-Demo</b>
+            </h1>
+</div>
+
+<p align="middle">
+    <a href="https://github.com/pjqdyd/AI-Agent-Demo" target="_blank">
+        <img src="https://badgen.net/badge/version/v1.0.0"/>
+    </a>
+    <img src="https://badgen.net/badge/language/antdx/cyan"/>
+    <img src="https://badgen.net/badge/language/langchain/blue"/>
+    <img src="https://badgen.net/badge/language/typescript/cyan"/>
+    <img src="https://badgen.net/badge/package/pnpm/blue"/>
+    <img src="https://badgen.net/badge/license/monorepo/green"/>
+    <img src="https://badgen.net/badge/contributors/1/blue"/>
+</p>
+
 #### 项目实现:
 
 > 1. Ollama本地部署模型
