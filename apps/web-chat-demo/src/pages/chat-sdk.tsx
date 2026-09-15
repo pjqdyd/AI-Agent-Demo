@@ -9,7 +9,7 @@ import {
     type XModelResponse,
     XRequest,
 } from '@ant-design/x-sdk';
-import { Button, Flex, Tooltip } from 'antd';
+import { Button, Flex, Switch, Tooltip } from 'antd';
 import React from 'react';
 
 /**
@@ -34,6 +34,7 @@ const useLocale = () => {
         placeholder: isCN
             ? '请输入内容，按下 Enter 发送消息'
             : 'Please enter content and press Enter to send message',
+        deepThinking: isCN ? '深度思考' : 'Deep Thinking',
         waiting: isCN ? '请稍候...' : 'Please wait...',
         requestFailed: isCN ? '请求失败，请重试！' : 'Request failed, please try again!',
         requestAborted: isCN ? '请求已中止' : 'Request is aborted',
@@ -69,6 +70,8 @@ const role: BubbleListProps['role'] = {
 
 const Chat= () => {
     const [content, setContent] = React.useState('');
+    // 深度思考开关：控制发送请求时是否携带深度思考参数
+    const [deepThinking, setDeepThinking] = React.useState(false);
     // 创建OpenAI聊天提供者：配置请求参数和模型
     const [provider] = React.useState(
         new OpenAIChatProvider({
@@ -251,6 +254,12 @@ const Chat= () => {
                 }}
                 onChange={setContent}
                 placeholder={locale.placeholder}
+                footer={
+                    <Flex align="center" gap="small">
+                        {locale.deepThinking}
+                        <Switch checked={deepThinking} onChange={setDeepThinking} />
+                    </Flex>
+                }
                 onSubmit={(nextContent) => {
                     onRequest({
                         messages: [
@@ -262,7 +271,7 @@ const Chat= () => {
                         frequency_penalty: 0,
                         max_tokens: 1024,
                         thinking: {
-                            type: 'disabled',
+                            type: deepThinking ? 'enabled' : 'disabled',
                         },
                     });
                     setContent('');

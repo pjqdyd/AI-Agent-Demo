@@ -30,7 +30,8 @@
 #### 如何运行：
 
  - 本地启动Ollama：例如`ollama run qwen3.5:0.8b`
- - 交互式命令行访问，或者通过BASE_URL: `http://localhost:11434/v1/chat/completions`接入访问
+ - 通过交互式CLI命令行访问
+ - 通过配置项目的BASE_URL: `http://localhost:11434/v1/chat/completions`接入访问
  - 进入web-chat-demo项目：运行`pnpm run dev`启动应用，访问页面/chat-sdk
 
 #### 总结
