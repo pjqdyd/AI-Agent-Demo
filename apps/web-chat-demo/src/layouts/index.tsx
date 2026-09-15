@@ -12,7 +12,10 @@ export default function Layout() {
           <Link to="/docs">Docs</Link>
         </li>
         <li>
-          <Link to="/chat">AI Chat</Link>
+          <Link to="/chat">Chat UI</Link>
+        </li>
+        <li>
+          <Link to="/chat-sdk">AI Chat SDK</Link>
         </li>
         <li>
           <a href="https://github.com/umijs/umi">Github</a>

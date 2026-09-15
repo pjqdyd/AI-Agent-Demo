@@ -5,6 +5,7 @@ export default defineConfig({
     { path: "/", component: "index" },
     { path: "/docs", component: "docs" },
     { path: "/chat", component: "chat" },
+    { path: "/chat-sdk", component: "chat-sdk" },
   ],
   npmClient: 'pnpm',
   // utoopack: {},

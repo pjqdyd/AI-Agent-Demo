@@ -12,9 +12,11 @@
   },
   "dependencies": {
     "@ant-design/x": "^2.9.0",
+    "@ant-design/x-markdown": "^2.9.0",
+    "@ant-design/x-sdk": "^2.9.0",
+    "@monorepo/utils": "workspace:*",
     "antd": "^6.6.4",
-    "umi": "^4.7.17",
-    "@monorepo/utils": "workspace:*"
+    "umi": "^4.7.17"
   },
   "devDependencies": {
     "@types/react": "^18.0.33",
