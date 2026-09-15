@@ -1,6 +1,8 @@
 {
+  "name": "@monorepo/web-chat-demo",
+  "version": "1.0.0",
   "private": true,
-  "author": "pjqdyd <1909025079@qq.com>",
+  "author": "pjqdyd",
   "scripts": {
     "dev": "umi dev",
     "build": "umi build",
@@ -10,7 +12,9 @@
   },
   "dependencies": {
     "@ant-design/x": "^2.9.0",
-    "umi": "^4.7.17"
+    "antd": "^6.6.4",
+    "umi": "^4.7.17",
+    "@monorepo/utils": "workspace:*"
   },
   "devDependencies": {
     "@types/react": "^18.0.33",
