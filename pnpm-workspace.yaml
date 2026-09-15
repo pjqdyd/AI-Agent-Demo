@@ -5,3 +5,8 @@ packages:
   - 'apps/*'
   # 排除目录（可选）
   # - '!packages/**/test'
+allowBuilds:
+  core-js: true
+  core-js-pure: true
+  es5-ext: true
+  esbuild: true
