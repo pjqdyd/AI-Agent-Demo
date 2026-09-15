@@ -19,8 +19,7 @@
     </a>
     <img src="https://badgen.net/badge/language/antdx/cyan"/>
     <img src="https://badgen.net/badge/language/langchain/blue"/>
-    <img src="https://badgen.net/badge/language/typescript/cyan"/>
-    <img src="https://badgen.net/badge/package/pnpm/blue"/>
+    <img src="https://badgen.net/badge/package/pnpm/cyan"/>
     <img src="https://badgen.net/badge/license/monorepo/green"/>
     <img src="https://badgen.net/badge/contributors/1/blue"/>
 </p>
