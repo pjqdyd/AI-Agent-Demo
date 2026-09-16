@@ -11,3 +11,9 @@ build/
 
 # turbo 本地缓存
 .turbo
+
+logs
+.logs
+
+# egg 每次启动生成的运行时诊断文件（配置 dump、启动耗时等）
+run

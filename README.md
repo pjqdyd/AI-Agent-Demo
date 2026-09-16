@@ -28,14 +28,15 @@
 
 > 1. Ollama本地部署模型
 > 2. WebChat功能实现
-> 3. LangChain使用
+> 3. LangChain: Prompt、RAG、Tools 实现
 > 4. MCP功能实现：[MCP-TS-DEMO](https://github.com/pjqdyd/mcp-ts-demo)
 
 #### 技术选型：
  - 环境：Node18+、TypeScript
  - 构建工具：pnpm、monorepo、turbo、changeset
- - AI Agent SDK: LangChain.JS
- - 前端框架：Umi、React18、AntDesign
+ - 前端框架：Umi、React18、AntD
+ - 后端框架：Midway.js、Egg.js、TypeORM、MySql、Zod
+ - Agent SDK: LangChain.JS
  - WebChat组件: AntDesignX、X-SDK
 
 #### 项目目录:
@@ -58,6 +59,8 @@
  - 通过交互式CLI命令行访问
  - 通过配置项目的BASE_URL: `http://localhost:11434/v1/chat/completions`接入访问
  - 进入web-chat-demo项目：运行`pnpm run dev`启动应用，访问页面/chat-sdk
+
+ - 如果要启动langchain-ts-demo项目，请查看对应目录下的README.md文件
 
 #### 构建发布：
 ```

@@ -10,6 +10,10 @@ allowBuilds:
   core-js-pure: true
   es5-ext: true
   esbuild: true
+  protobufjs: true
 # 强制 human-id 降到 CJS 版本（兼容 Node 18 上的 @changesets/write CJS require）
+# 强制 zod-to-json-schema 钉到 3.23.3：langchain-ts-demo 锁定 zod 3.24.4（避免 tool() 类型爆炸），
+# 而 zod-to-json-schema 3.25+ 会 require zod 3.25 才有的 zod/v3 子路径，运行时报 ERR_PACKAGE_PATH_NOT_EXPORTED
 overrides:
   human-id: ^2.0.1
+  zod-to-json-schema: 3.23.3
