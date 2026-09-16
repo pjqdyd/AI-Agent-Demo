@@ -9,7 +9,7 @@
         justify-content: center; 
         align-items: center;">
             <h1 style="display: inline-block; font-size: 20px; line-height: 20px; font-weight: bold;">
-                <b>AI-Agent-Demo</b>
+                <b>ai-agent-demo</b>
             </h1>
 </div>
 
