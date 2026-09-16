@@ -1,3 +1,4 @@
+import React from 'react';
 import { SyncOutlined } from '@ant-design/icons';
 import type { BubbleListProps } from '@ant-design/x';
 import { Bubble, Sender } from '@ant-design/x';
@@ -5,12 +6,10 @@ import XMarkdown from '@ant-design/x-markdown';
 import {
     OpenAIChatProvider,
     useXChat,
-    type XModelParams,
-    type XModelResponse,
     XRequest,
 } from '@ant-design/x-sdk';
 import { Button, Flex, Switch, Tooltip } from 'antd';
-import React from 'react';
+import type { XModelParams, XModelResponse } from "@ant-design/x-sdk"
 
 /**
  * 替换 BASE_URL、PATH、MODEL、API_KEY 为您自己的值
