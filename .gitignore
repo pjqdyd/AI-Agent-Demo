@@ -8,3 +8,6 @@ build/
 
 **/package-lock.json
 **/yarn.lock
+
+# turbo 本地缓存
+.turbo

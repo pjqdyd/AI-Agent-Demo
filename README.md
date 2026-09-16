@@ -33,7 +33,7 @@
 
 #### 技术选型：
  - 环境：Node18+、TypeScript
- - 构建工具：pnpm、monorepo、webpack
+ - 构建工具：pnpm、monorepo、turbo
  - AI Agent SDK: LangChain.JS
  - 前端框架：Umi、React18、AntDesign
  - WebChat组件: AntDesignX、X-SDK
@@ -47,6 +47,7 @@
  ├─packages             子包目录
  ├─package.json         package配置
  ├─tsconfig.json        ts配置文件
+ ├─turbo.json           构建配置文件
  ├─pnpm-workspace.yaml  monorepo配置文件
  ├─README.md            README.md文件
  └─.gitignore           .gitignore文件             

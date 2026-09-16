@@ -5,7 +5,10 @@
   "private": true,
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "typecheck": "turbo run typecheck",
+    "test": "turbo run test"
   },
   "keywords": [],
   "author": "",
@@ -20,6 +23,7 @@
   "packageManager": "pnpm@12.4.1",
   "type": "module",
   "devDependencies": {
+    "turbo": "^2.10.13",
     "typescript": "^5.6.0"
   }
 }
