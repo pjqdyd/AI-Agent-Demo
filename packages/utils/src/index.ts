@@ -3,7 +3,7 @@
  * @param name
  */
 export function hello(name: string): string {
-    return `Hello ${name}, from @monorepo/utils`;
+    return `Hello ${name}, from @pjqdyd/utils-ai-demo`;
 }
 
 /**

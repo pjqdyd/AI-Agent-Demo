@@ -1,5 +1,5 @@
 {
-  "name": "@monorepo/web-chat-demo",
+  "name": "@pjqdyd/web-chat-demo",
   "version": "1.0.0",
   "private": true,
   "author": "pjqdyd",
@@ -14,7 +14,7 @@
     "@ant-design/x": "^2.9.0",
     "@ant-design/x-markdown": "^2.9.0",
     "@ant-design/x-sdk": "^2.9.0",
-    "@monorepo/utils": "workspace:*",
+    "@pjqdyd/utils-ai-demo": "workspace:*",
     "antd": "^6.6.4",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",

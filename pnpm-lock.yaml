@@ -184,7 +184,7 @@ importers:
 
   apps/langchain-ts-demo:
     dependencies:
-      '@monorepo/utils':
+      '@pjqdyd/utils-ai-demo':
         specifier: workspace:*
         version: link:../../packages/utils
 
@@ -199,7 +199,7 @@ importers:
       '@ant-design/x-sdk':
         specifier: ^2.9.0
         version: 2.9.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@monorepo/utils':
+      '@pjqdyd/utils-ai-demo':
         specifier: workspace:*
         version: link:../../packages/utils
       antd:
@@ -227,6 +227,8 @@ importers:
       typescript:
         specifier: ^5.0.3
         version: 5.9.3
+
+  packages/types: {}
 
   packages/utils: {}
 

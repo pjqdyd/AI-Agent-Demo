@@ -8,7 +8,7 @@ packages:
 allowBuilds:
   core-js: true
   core-js-pure: true
-  es5-ext: set this to true or false
+  es5-ext: true
   esbuild: true
 # 强制 human-id 降到 CJS 版本（兼容 Node 18 上的 @changesets/write CJS require）
 overrides:

@@ -17,7 +17,7 @@ import {
     SmileOutlined,
     UserOutlined,
 } from '@ant-design/icons';
-import { hello } from '@monorepo/utils';
+import { hello } from '@pjqdyd/utils-ai-demo';
 
 export default () => {
     const [value, setValue] = React.useState('');

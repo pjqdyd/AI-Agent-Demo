@@ -65,7 +65,7 @@
  pnpm version   # 消费 changeset，更新 package.json version + CHANGELOG.md 
  
  pnpm build     # turbo 调度构建所有包
- pnpm build --filter=@monorepo/utils # 或仅构建 utils
+ pnpm build --filter=@pjqdyd/utils-ai-demo # 或仅构建 utils
  
  # 进入 utils 目录，检测要发布的内容
  cd packages/utils

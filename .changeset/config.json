@@ -11,7 +11,7 @@
   "baseBranch": "master",
   "updateInternalDependencies": "patch",
   "ignore": [
-    "@monorepo/web-chat-demo",
-    "@monorepo/langchain-ts-demo"
+    "@pjqdyd/web-chat-demo",
+    "@pjqdyd/langchain-ts-demo"
   ]
 }
