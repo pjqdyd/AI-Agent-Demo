@@ -33,7 +33,7 @@
 
 #### 技术选型：
  - 环境：Node18+、TypeScript
- - 构建工具：pnpm、monorepo、turbo
+ - 构建工具：pnpm、monorepo、turbo、changeset
  - AI Agent SDK: LangChain.JS
  - 前端框架：Umi、React18、AntDesign
  - WebChat组件: AntDesignX、X-SDK
@@ -58,6 +58,27 @@
  - 通过交互式CLI命令行访问
  - 通过配置项目的BASE_URL: `http://localhost:11434/v1/chat/completions`接入访问
  - 进入web-chat-demo项目：运行`pnpm run dev`启动应用，访问页面/chat-sdk
+
+#### 构建发布：
+```
+ pnpm changeset # 交互式写 changeset（生成 .changeset/*.md）
+ pnpm version   # 消费 changeset，更新 package.json version + CHANGELOG.md 
+ 
+ pnpm build     # turbo 调度构建所有包
+ pnpm build --filter=@monorepo/utils # 或仅构建 utils
+ 
+ # 进入 utils 目录，检测要发布的内容
+ cd packages/utils
+ pnpm pack --pack-destination ../    # 执行后会生成一个.tgz文件， 将要上传到npm的那份产物
+ pnpm pack --dry-run                 # 查看打包输出的产物
+ 
+ cd packages/utils 
+ # 方式 A：通过 changesets（推荐，自动跳过未变 version 的包 + 打 git tag） 
+ pnpm release  # 发布有版本变化的包到 npm（需先 npm login）
+ 
+ # 方式 B：手动发布
+ npm publish --access restricted --registry=https://registry.npmjs.org/
+ ```
 
 #### 总结
  
