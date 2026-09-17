@@ -18,6 +18,9 @@ export default function Layout() {
           <Link to="/chat-sdk">AI Chat SDK</Link>
         </li>
         <li>
+          <Link to="/chat-agent">AI Agent Chat</Link>
+        </li>
+        <li>
           <a href="https://github.com/umijs/umi">Github</a>
         </li>
       </ul>
