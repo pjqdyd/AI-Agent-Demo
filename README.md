@@ -64,7 +64,13 @@
  - 进入web-chat-demo项目：运行`pnpm run dev`启动应用，访问页面/chat-sdk
 
  - 如果要启动langchain-ts-demo项目，请查看对应目录下的README.md文件
- - 前置依赖环境node18、ollama run qwen3.5:2b 、mysql
+ - 前置依赖环境
+```
+   node18
+   ollama run qwen3.5:2b
+   ollama pull nomic-embed-text
+   mysql数据库database: ai-agent-demo
+```
 
 #### 构建发布：
 ```

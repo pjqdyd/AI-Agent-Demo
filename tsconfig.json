@@ -16,6 +16,6 @@
   },
   "references": [
     {"path": "./packages/utils"},
-    {"path": "./apps/web-chat-demo"}
+    {"path": "./packages/types"},
   ]
 }

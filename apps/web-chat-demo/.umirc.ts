@@ -16,5 +16,6 @@ export default defineConfig({
     },
   },
   npmClient: 'pnpm',
+  esbuildMinifyIIFE: true,
   // utoopack: {},
 });
