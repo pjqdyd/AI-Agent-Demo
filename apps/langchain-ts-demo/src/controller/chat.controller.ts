@@ -63,6 +63,7 @@ export class ChatController {
     this.ctx.set('Cache-Control', 'no-cache');
     this.ctx.set('Connection', 'keep-alive');
     this.ctx.set('X-Accel-Buffering', 'no');
+    this.ctx.status = 200;
     this.ctx.res.flushHeaders?.();
 
     const send = (data: ChatStreamData) => {
