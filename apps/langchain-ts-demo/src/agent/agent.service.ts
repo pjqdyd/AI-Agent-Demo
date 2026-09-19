@@ -1,5 +1,5 @@
 import { Provide, Scope, ScopeEnum, Inject, Config } from '@midwayjs/core';
-import { ChatOllama } from '@langchain/ollama';
+import { ChatOpenAI } from '@langchain/openai';
 import { createReactAgent } from '@langchain/langgraph/prebuilt';
 import { AIMessageChunk, HumanMessage } from '@langchain/core/messages';
 import type { BaseMessage } from '@langchain/core/messages';
@@ -15,7 +15,7 @@ import { createKnowledgeSearchTool } from './tools/knowledge.tool';
  * - prompt：系统提示词（prompts.ts 集中管理）
  * - 上下文：从 MySQL 加载会话历史，随每轮请求传入
  * - tools：calculator（数学计算）+ knowledge_search（RAG 检索）
- * - 模型：ChatOllama 通过 API 调用本地 Ollama 服务
+ * - 模型：ChatOpenAI（OpenAI 兼容客户端）指向本地 Ollama 的 /v1 端点
  */
 @Provide()
 @Scope(ScopeEnum.Singleton)
@@ -37,9 +37,15 @@ export class AgentService {
    */
   private getAgent(): ReturnType<typeof createReactAgent> {
     if (!this.agent) {
-      const model = new ChatOllama({
+      // 使用 OpenAI 兼容客户端指向 Ollama 的 /v1 端点：
+      const model = new ChatOpenAI({
         model: this.ollamaConfig.chatModel,
-        baseUrl: this.ollamaConfig.baseUrl,
+        streaming: true,
+        configuration: {
+          baseURL: `${this.ollamaConfig.baseUrl}/v1`,
+        },
+        // 本地Ollama不校验API Key，langchain要求非空，占位即可
+        apiKey: 'ollama',
       });
       this.agent = createReactAgent({
         llm: model,

@@ -59,8 +59,11 @@ export class ChatController {
     await this.chatHistoryService.saveMessage(sessionId, 'user', content);
 
     // SSE 响应头：禁用缓存与代理缓冲，保证 token 级实时输出
+    // no-transform 是关键：HTTP 标准指令，禁止中间层转换响应体。
+    // umi dev server 的 compression 中间件检测到该头会直接跳过 gzip/br
+    // 压缩（实测验证），否则 SSE 小 chunk 会积压在 zlib 缓冲区导致无流式效果
     this.ctx.set('Content-Type', 'text/event-stream; charset=utf-8');
-    this.ctx.set('Cache-Control', 'no-cache');
+    this.ctx.set('Cache-Control', 'no-cache, no-transform');
     this.ctx.set('Connection', 'keep-alive');
     this.ctx.set('X-Accel-Buffering', 'no');
     this.ctx.status = 200;
